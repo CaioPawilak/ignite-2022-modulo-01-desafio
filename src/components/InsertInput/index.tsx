@@ -5,19 +5,19 @@ import styles from './styles.module.scss'
 
 export function InsertInput({ addTask, newTaskId }: IInsertInput) {
     console.log("Rederizei")
-    const textRef = useRef(null);
+    const textRef = useRef<HTMLInputElement | null>(null);
 
     function handleCreateTask(event: FormEvent) {
         event.preventDefault();
 
         const newTask: ITaskItem = {
             id: Number(newTaskId),
-            message: textRef.current.value,
+            message: textRef.current!.value,
             completed: false,
             publishedAt: new Date(Date.now()),
         }
         addTask?.(newTask);
-        textRef.current.value = ''
+        textRef.current!.value = ''
         debugger;
     }
     function handleNewInvalidComment(event: InvalidEvent<HTMLInputElement>) {
