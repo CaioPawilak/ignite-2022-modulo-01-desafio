@@ -1,0 +1,43 @@
+.formWrapper{
+    padding-top: -500px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    width: 73.6rem;
+    margin: -30px auto 0;
+    flex-direction: column;
+}
+.emptyTableWrapper{
+    border-top: 1px solid var(--gray-400);
+    border-radius: 8px;
+    width: 100%;
+    margin-top: 2.4rem;
+}
+.emptyTableContent{
+    width: 68.8rem;
+    margin: 6.4rem 2.4rem;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    img + p{
+        font-weight: 700;
+    }
+    p{
+        line-height: 22.4px;
+        font-weight: 400;
+        font-size: 1.6rem;
+        color: var(--gray-300);
+    }
+    img{
+        width: 5.6rem;
+        height: 5.6rem;
+        margin-bottom: 1.6rem;
+    }
+
+}
+.inputFormWrapper{
+   display: flex;
+   margin-bottom: 6.4rem;
+   
+   
+}
