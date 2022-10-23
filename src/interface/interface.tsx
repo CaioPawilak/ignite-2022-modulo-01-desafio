@@ -1,6 +1,6 @@
 export interface ITaskItem {
   id: number;
-  message: string;
+  message: string | undefined | null;
   completed: boolean;
   publishedAt?: Date;
   updateTask?: (taskId: number) => void;

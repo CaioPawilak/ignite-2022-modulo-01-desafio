@@ -24,17 +24,15 @@ function renderEmptyTable() {
 
 export function FormWrapper() {
     const [tasksList, setTasksList] = useState<ITaskItem[]>([]);
-    const [completedTasks, setCompletedTasks] = useState<ITaskItem[]>([])
+    const [completedTasks, setCompletedTasks] = useState<ITaskItem[]>([]);
 
     const newTaskId = getNewTaksID();
-
 
     function addTask(newTaks: ITaskItem) {
         setTasksList([...tasksList, newTaks]);
     }
 
     function deleteTask(taksId: number) {
-        debugger;
         const _tasksList = tasksList.filter(i => i.id !== taksId);
         let _completedTasks = tasksList.filter(i => i.completed === true && i.id !== taksId);
         setCompletedTasks(_completedTasks)
